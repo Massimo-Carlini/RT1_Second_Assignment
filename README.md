@@ -1,3 +1,4 @@
+Massimo Carlini S4678445
 # Assignment 2
 ## Description of the assignment
 The aim of this assignment is to develop three node starting from the package assignment_2_2022 that is provided in this ghitub repository https://github.com/CarmineD8/assignment_2_2022 that provides an implementation of an action server that moves a robot in the environment by implementing the bug0 algorithm. To reach this goal we need to implement three nodes:
