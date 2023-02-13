@@ -22,11 +22,6 @@ The following nodes are the ones I created:
 	Here is the pseudocode of this node:
 
 	```sh
-	-Initialize the rospy node
-	-Define a global publisher to publish the Position_velocity message
-	-Define a subscriber which listens to the Odometry message and calls the odom_callback function
-	Call the user function
-
 	odom_callback(odom_msg)
 		- Get the x, y position and x,y linear velocity from the Odometry message
 		- Create a Position_velocity message
@@ -50,6 +45,11 @@ The following nodes are the ones I created:
 					- Shut down the rospy node
 				- If the user choice is invalid
 					- Display an error message
+	main()
+		- Initialize the rospy node
+		- Define a global publisher to publish the Position_velocity message
+		- Define a subscriber which listens to the Odometry message and calls the odom_callback function
+		- Call the user function
 	```
 * `goal.py`: node which prints the count of successful goal reached and cancelled goals.
 * `print.py`: node that prints the robot's distance from its target and average speed, which it obtains by subscribing to the /Position_velocity topic with a custom message. The frequency at which the information is published can be set via a parameter in the launch file.
@@ -60,7 +60,9 @@ The following nodes are the ones I created:
 	sudo apt-get install xterm
 	```
 * Now we are able to run the master:
-'roscore &'
+	```sh
+	roscore &
+	```
 * Now we can compile the module going inside the **ROS** directory and running
 	```sh 
 	catkin_make
@@ -74,6 +76,7 @@ Once the program has run, 2 screens will appear where it is possible to see the 
 * **Rviz**: it is a ROS tool mainly used for debugging.
 * **Gazebo**: allows the 3D view of the robot and the world including the obstacles to avoid.
 Furthermore, 2 windows will open with which the user can interact with the user to make the robot move and see information about it.
+
 
 ## Possible improvements
 Is it possible to make some improvement on this project:
